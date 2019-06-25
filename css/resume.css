@@ -190,3 +190,7 @@ a {
 a:hover, a:focus, a:active {
   color: #824027;
 }
+
+.skill-bar {
+  font-size: 1rem !important;
+}
