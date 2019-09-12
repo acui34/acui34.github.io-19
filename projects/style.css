@@ -1,0 +1,188 @@
+html, body {
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 100%;
+    color:#595859;
+}
+
+body {
+    margin: 0px;
+}
+.underline {
+    border-bottom: 1px dashed #e7a221;
+    
+}
+
+h2 {
+    font-size: 0.8em;
+    margin: 4px;
+    font-weight: lighter;
+}
+
+
+#container{
+  height: 100%;
+  font-weight: lighter;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#header {
+    background: white;
+    height: 30px;
+    margin: 0 auto;
+
+}
+
+#header h1 {
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: lighter;
+}
+
+
+
+#main {
+    float: left;    
+    background-color: #eeedee;
+    height: 100%;
+    flex: 79%;
+}
+
+
+#sidebar {
+    float: left;    
+    background-color:#eeedee;
+    height: 100%;
+    flex: 20%;
+    margin-left: 5px;
+}
+
+.button {
+    background-color: white;
+    display:inline-block;
+    padding: 6px 18px 10px 18px;
+    font-size: 0.8em;
+    font-weight:bold; 
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    position:absolute;
+    max-width: 10%;
+
+}
+
+.active-button{
+    background-color: white;
+    border: 1px solid #34A9D0;
+}
+
+.path-label{
+    color:black; 
+    position: absolute;
+    text-decoration: none;
+    font-size: 13px;
+    background-color:#eeedee;
+    padding: 5px 8px;
+}
+
+.active-label{
+    color:#34A9D0;
+    font-weight: bold;
+}
+
+.path-label:hover {
+    color:#34A9D0;
+}
+
+.start-label{
+    color: #e7a221;
+    margin-top: 35px;
+    position: absolute;
+    left: 39%;
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+.subheading{
+    background-color: white;
+    height:20px;
+    position: absolute;
+    width: 100%;
+    color: #cac9ca;
+}
+
+.topcorner{
+    position:absolute;
+    top:0;
+    right:0;
+    width:3%;
+    height: 3%;
+ }
+
+ .path{
+    stroke-width: 0.2px;
+    stroke: "black";
+ }
+/* -------------- Lightbox Style -------------- */
+
+.thumbnail {
+    max-width: 40%;
+  }
+
+.italic { font-style: italic; }
+.small { font-size: 0.8em; }
+
+
+.lightbox {
+    /** Default lightbox to hidden */
+    display: none;
+
+    /** Position and style */
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+    /** Pad the lightbox image */
+    max-width: 100%;
+    max-height: 90%;
+    margin-top: 2%;
+}
+
+.lightbox:target {
+    /** Remove default browser outline */
+    outline: none;
+
+    /** Unhide lightbox **/
+    display: block;
+}
+
+/* -------------- Rescale if screen width is less than 780px -------------- */
+
+@media only screen and (max-width: 780px) {
+
+    #header h1 {
+        font-size: 1.1em;
+    }
+
+    #container{
+        flex-direction: column;
+      }
+      
+    #sidebar {
+        border: 0;
+    }
+    .button {
+        font-size: 0.3em;
+    }
+    
+}
